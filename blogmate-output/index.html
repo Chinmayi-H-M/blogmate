@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How AI Is Changing College Life in India — Bridging the Campus Divide</title>
+  <meta name="description" content="AI is reshaping college life in India, especially for tier-2 and tier-3 students. Explore learning, language, placements and what still needs fixing.">
+  <meta name="keywords" content="AI for college students in India, AI in Indian higher education, AI study tools India, tier-2 colleges India, AI and the digital divide, AI for exam preparation India, AI and graduate employability India">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f766e">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How AI Is Changing College Life in India — Bridging the Campus Divide">
+  <meta property="og:description" content="AI is reshaping college life in India, especially for tier-2 and tier-3 students. Explore learning, language, placements and what still needs fixing.">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How AI Is Changing College Life in India — Bridging the Campus Divide">
+  <meta name="twitter:description" content="AI is reshaping college life in India, especially for tier-2 and tier-3 students. Explore learning, language, placements and what still needs fixing.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How AI Is Changing College Life in India — and Why Tier-2 Students Have the Most to Gain",
+    "description": "AI is reshaping college life in India, especially for tier-2 and tier-3 students. Explore learning, language, placements and what still needs fixing.",
+    "keywords": "AI for college students in India, AI in Indian higher education, AI study tools India, tier-2 colleges India, AI and the digital divide, AI for exam preparation India, AI and graduate employability India",
+    "inLanguage": "en-IN",
+    "articleSection": "Education"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Is AI actually useful for college students in India?", "acceptedAnswer": {"@type": "Answer", "text": "For specific tasks, yes: explaining concepts, generating practice questions, summarising readings, critiquing drafts and rehearsing interviews. It is weakest on precise facts, citations and exam-specific answers you have not verified."}},
+      {"@type": "Question", "name": "Can AI replace coaching classes?", "acceptedAnswer": {"@type": "Answer", "text": "Partly, for some students. It handles doubt-solving and practice cheaply. It cannot replace structured teaching, peer competition, mentorship or accountability. Most students do best with a mix."}},
+      {"@type": "Question", "name": "Are free AI tools enough for exam prep?", "acceptedAnswer": {"@type": "Answer", "text": "Usually, yes. Free tiers cover explanation, practice and feedback. Paid tiers add speed and longer context, but digital access and disciplined use matter more than the subscription."}},
+      {"@type": "Question", "name": "How do I avoid over-relying on AI?", "acceptedAnswer": {"@type": "Answer", "text": "Use an explain, verify, attempt loop: ask for the reasoning, check it against a textbook, then solve a similar problem yourself before moving on."}},
+      {"@type": "Question", "name": "Is using AI cheating?", "acceptedAnswer": {"@type": "Answer", "text": "Depends on your institution. About 57% of surveyed leading institutions have an AI policy. Check your college's rules before submitting AI-assisted work."}},
+      {"@type": "Question", "name": "Will AI reduce jobs for Indian graduates?", "acceptedAnswer": {"@type": "Answer", "text": "The evidence is mixed. Overall graduate employability fell to 42.6% in 2024, while AI/ML role readiness rose to 46.1%. Expect a shift in which skills matter, not a simple net loss, but this needs watching."}}
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --surface: #ffffff;
+      --ink: #1d2329;
+      --muted: #5b6570;
+      --accent: #0f766e;
+      --accent-dark: #0b5c56;
+      --accent-soft: #e6f2f0;
+      --line: #e4ded6;
+      --amber-bg: #fff4e0;
+      --amber-ink: #8a4b00;
+      --amber-line: #e9b96e;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+      --shadow: 0 1px 2px rgba(29, 35, 41, 0.04), 0 12px 40px rgba(29, 35, 41, 0.07);
+      --maxw: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.7;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--accent); }
+
+    :focus-visible {
+      outline: 3px solid rgba(15, 118, 110, 0.45);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -100px;
+      background: var(--ink);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      z-index: 100;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus { top: 16px; }
+
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), #2bb3a6);
+      z-index: 60;
+      transition: width 0.1s linear;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .masthead {
+      padding: 64px 0 36px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 40px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      background: var(--accent-soft);
+      border: 1px solid rgba(15, 118, 110, 0.15);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(2rem, 4.6vw, 3.35rem);
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      font-weight: 800;
+      margin: 0 0 20px;
+      max-width: 22ch;
+      text-wrap: balance;
+    }
+
+    .standfirst {
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 68ch;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      margin-top: 26px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .meta-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .meta-row span::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.7;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      gap: 48px;
+      align-items: start;
+      padding-bottom: 96px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 20px 20px 16px;
+      box-shadow: 0 1px 2px rgba(29, 35, 41, 0.03);
+      max-height: calc(100vh - 56px);
+      overflow: auto;
+    }
+
+    .toc h2 {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 12px;
+      font-weight: 700;
+    }
+
+    .toc ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      counter-reset: toc;
+    }
+
+    .toc li {
+      counter-increment: toc;
+      margin: 0;
+    }
+
+    .toc a {
+      display: flex;
+      gap: 10px;
+      padding: 7px 8px;
+      border-radius: 7px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      line-height: 1.35;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-variant-numeric: tabular-nums;
+      color: #a8a29a;
+      font-size: 0.75rem;
+      padding-top: 2px;
+      flex: 0 0 auto;
+    }
+
+    .toc a:hover {
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+    }
+
+    .toc a.active {
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 600;
+    }
+
+    .toc a.active::before { color: var(--accent); }
+
+    .article {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: clamp(28px, 5vw, 56px);
+      min-width: 0;
+    }
+
+    .article > section + section { margin-top: 46px; }
+
+    .article h2 {
+      font-family: var(--sans);
+      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      font-weight: 750;
+      margin: 0 0 16px;
+      scroll-margin-top: 28px;
+    }
+
+    .article h3 {
+      font-family: var(--sans);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 26px 0 6px;
+      color: var(--ink);
+    }
+
+    .article p {
+      font-family: var(--serif);
+      font-size: 1.06rem;
+      line-height: 1.78;
+      margin: 0 0 18px;
+      color: #2b323a;
+    }
+
+    .article p:last-child { margin-bottom: 0; }
+
+    .article strong { font-weight: 700; }
+
+    .article ul,
+    .article ol {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0 0 20px;
+      padding-left: 1.4em;
+      color: #2b323a;
+    }
+
+    .article li { margin-bottom: 9px; }
+
+    .article li::marker { color: var(--accent); }
+
+    .article a {
+      color: var(--accent-dark);
+      text-decoration-color: rgba(15, 118, 110, 0.4);
+      text-decoration-line: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    .article a:hover { text-decoration-color: var(--accent); }
+
+    .callout {
+      margin: 24px 0;
+      padding: 18px 20px 18px 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      background: #fbfaf8;
+      position: relative;
+    }
+
+    .callout p {
+      font-size: 1rem;
+      line-height: 1.65;
+      margin: 0;
+      color: #2b323a;
+    }
+
+    .callout-example {
+      background: var(--accent-soft);
+      border-color: rgba(15, 118, 110, 0.18);
+      border-left: 4px solid var(--accent);
+    }
+
+    .callout-note {
+      background: #f6f3ee;
+      border-left: 4px solid #b8ad9e;
+    }
+
+    .callout-label {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 6px;
+    }
+
+    .callout-note .callout-label { color: #7a6a56; }
+
+    .flag {
+      display: inline;
+      background: var(--amber-bg);
+      color: var(--amber-ink);
+      border-bottom: 1px solid var(--amber-line);
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-family: var(--sans);
+      font-size: 0.88em;
+      font-weight: 600;
+    }
+
+    .faq-item {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 4px;
+    }
+
+    .faq-item:first-of-type { border-top: none; padding-top: 0; }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+    }
+
+    .faq-item p { margin-bottom: 0; }
+
+    .sources ol {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .sources li { margin-bottom: 12px; }
+
+    .sources a {
+      word-break: break-word;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+    }
+
+    .verification {
+      background: var(--amber-bg);
+      border: 1px solid var(--amber-line);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      margin-top: 40px;
+    }
+
+    .verification h2 {
+      font-size: 1rem !important;
+      color: var(--amber-ink);
+      margin-bottom: 12px !important;
+    }
+
+    .verification ul { margin-bottom: 0; }
+    .verification li { color: #6b4a12; }
+
+    footer.site-footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0 48px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(29, 35, 41, 0.24);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+      z-index: 50;
+    }
+
+    .to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .to-top:hover { background: var(--accent-dark); color: #fff; }
+
+    @media (max-width: 920px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-bottom: 72px;
+      }
+
+      .toc {
+        position: static;
+        max-height: none;
+        overflow: visible;
+      }
+
+      .toc ol {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2px 10px;
+      }
+
+      .masthead { padding-top: 44px; }
+      h1 { max-width: none; }
+    }
+
+    @media (max-width: 560px) {
+      .wrap { padding: 0 16px; }
+      body { font-size: 16px; }
+      .masthead { padding: 36px 0 26px; margin-bottom: 26px; }
+      .toc ol { grid-template-columns: 1fr; }
+      .article { border-radius: 14px; padding: 24px 20px; }
+      .article p { font-size: 1.01rem; }
+      .callout { padding: 16px 16px 16px 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .toc, .to-top, .progress, .skip-link, .site-footer { display: none !important; }
+      .layout { display: block; }
+      .article { border: none; box-shadow: none; padding: 0; }
+      .article a { color: #000; }
+      .article a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.75em;
+        color: #555;
+        word-break: break-all;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to article</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="wrap">
+      <span class="eyebrow">Education · India</span>
+      <h1>How AI Is Changing College Life in India — and Why Tier-2 Students Have the Most to Gain</h1>
+      <p class="standfirst">Sources are linked inline and listed at the end; illustrative examples are labelled, and anything still uncertain is flagged.</p>
+      <div class="meta-row">
+        <span>Research-backed explainer</span>
+        <span>Higher education</span>
+        <span>AI &amp; digital access</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <div class="layout">
+      <nav class="toc" aria-label="Table of contents">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#old-divide">The old divide</a></li>
+          <li><a href="#tutor-in-pocket">The tutor in your pocket</a></li>
+          <li><a href="#language">Language as a bridge</a></li>
+          <li><a href="#placements">Placement prep</a></li>
+          <li><a href="#other-side">What AI cannot fix</a></li>
+          <li><a href="#how-to-use">How to use AI well</a></li>
+          <li><a href="#colleges">What colleges can do</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#sources">Sources</a></li>
+          <li><a href="#verification">Verification flags</a></li>
+        </ol>
+      </nav>
+
+      <article class="article">
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>It's 12:40 a.m. and the class WhatsApp group is awake. Someone has posted a blurry photo of a hand-written note: "Can anyone explain this balance sheet adjustment before tomorrow's exam?"</p>
+          <p>Ten minutes later, a friend replies with a screenshot. Not from a textbook — from an AI assistant that walked through the step in Hindi, slowly, the way a patient senior would.</p>
+          <p>This is what AI in Indian higher education actually looks like. Not a robot lecturer or a shiny lab. A phone, a data pack, and a student who has run out of other options at midnight.</p>
+          <p>India has about <strong>4.5 crore students in higher education</strong>, spread across <strong>48,246 colleges and 1,289 universities</strong>, and roughly <strong>70% of responding colleges are private, unaided institutions</strong> (<a href="https://www.business-standard.com/education/news/higher-education-enrolment-reaches-record-45-mn-but-growth-slows-aishe-126070900844_1.html" target="_blank" rel="noopener noreferrer">AISHE 2023-24 via Business Standard</a>). Most of them are not in IITs or metro campuses. They are in tier-2 and tier-3 towns, in colleges with one computer lab and a library that stops at the 2019 edition.</p>
+          <p>The interesting question is no longer whether AI has reached Indian colleges. It has. The real question is who gets to use it well — and whether it narrows the gap or quietly widens it.</p>
+        </section>
+
+        <section id="old-divide">
+          <h2>The Old Divide: Coaching, Libraries and Location</h2>
+          <p>For decades, quality higher education in India followed a map. The best coaching clustered in Kota, Delhi, Hyderabad and a few other hubs. Good libraries, connected faculty and recruiter networks followed the same pin code.</p>
+          <p>So did confidence. Students at well-known colleges had brand value, internships and alumni who picked up the phone. Students elsewhere had determination and a bus pass.</p>
+          <p>The job-readiness gap is real, but smaller than the storytelling suggests. The <strong>Mercer | Mettl India Graduate Skill Index 2025</strong> put overall graduate employability at <strong>42.6%</strong>, down from 44.3% a year earlier. By tier: <strong>48.4% for Tier-I, 46.1% for Tier-II and 43.4% for Tier-III</strong> (<a href="https://www.business-standard.com/industry/news/india-job-market-graduate-skill-gap-ai-automation-employability-2025-125021800437_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a>; <a href="https://www.mercer.com/insights/talent-and-transformation/talent-assessment/indias-graduate-skill-index-2025/" target="_blank" rel="noopener noreferrer">Mercer</a>).</p>
+          <p>Roughly five percentage points separate Tier-I from Tier-III. That is a gap worth closing — not a chasm.</p>
+          <p>What AI changes is the cost of trying to close it.</p>
+        </section>
+
+        <section id="tutor-in-pocket">
+          <h2>What Changes When the Tutor Is in Your Pocket</h2>
+          <p>A coaching class runs on a timetable. An AI tutor runs when you do.</p>
+          <p>That difference sounds small until you are the student who missed a lecture because of a bus strike, or who understood nothing in class and has no one to ask at 10 p.m. AI can explain a concept, generate practice questions, summarise a chapter, check a draft and quiz you — at almost no marginal cost.</p>
+
+          <aside class="callout callout-example">
+            <p><span class="callout-label">Everyday example</span> You miss a Friday lecture on regression. Instead of copying a friend's notes, you paste the topic into an AI tool, ask for a plain-language explanation, then ask for five practice problems. You check the answers against the textbook. The tool got you started; the textbook kept you honest.</p>
+          </aside>
+
+          <p>Institutions are moving too. The <strong>EY-Parthenon–FICCI survey of 30 leading institutions (2025)</strong> found that <strong>60% permit student use of AI tools</strong>, <strong>53% use generative AI for learning materials</strong>, <strong>40% have deployed AI tutors or chatbots</strong>, <strong>39% use adaptive learning platforms</strong>, and <strong>38% use AI for automated grading</strong> (<a href="https://www.ey.com/en_in/insights/education/harnessing-ai-in-higher-education-opportunities-and-the-road-ahead" target="_blank" rel="noopener noreferrer">EY</a>; <a href="https://www.thehindu.com/education/colleges/over-60-higher-education-institutions-permitting-use-of-ai-tools-by-students-report/article70139505.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>).</p>
+          <p>One caveat matters: those are 30 <em>leading</em> institutions. They show where the top is heading, not what the average tier-3 college looks like today.</p>
+          <p>Student usage is widespread but harder to pin down. A <strong>Digital Education Council survey (2024)</strong> found <strong>86% of students use AI in their studies</strong>, with 54% using it weekly and 24% daily (<a href="https://www.ey.com/en_in/insights/education/harnessing-ai-in-higher-education-opportunities-and-the-road-ahead" target="_blank" rel="noopener noreferrer">EY, citing DEC</a>). That is a global figure, not an India-only one. <span class="flag"><strong>Needs verification:</strong> India-specific student AI usage data at comparable scale.</span></p>
+        </section>
+
+        <section id="language">
+          <h2>Language as a Bridge, Not a Barrier</h2>
+          <p>For many students, the hardest part of college is not the subject. It is the language the subject arrives in.</p>
+          <p>English-medium textbooks, lectures and interviews quietly disadvantage students from vernacular-medium schools — often the same students who are the first in their family to reach college. AI translation and explanation tools are starting to change that.</p>
+          <p>In May 2025, <strong>IGNOU partnered with IIT Bombay's Project Udaan</strong> to translate higher-education content into Indian languages (<a href="https://www.indiatoday.in/education-today/news/story/ignou-to-use-iit-bombays-new-ai-project-to-deliver-education-in-indian-language-2733627-2025-05-31" target="_blank" rel="noopener noreferrer">India Today</a>). In November 2025, <strong>Masai launched an IIT Patna-backed AI and ML certificate delivered in Hindi, Telugu, Marathi and Tamil</strong>, aimed explicitly at tier-2 and tier-3 learners (<a href="https://www.telegraphindia.com/edugraph/campus/masai-and-iit-patna-break-new-ground-by-taking-ai-and-ml-certificate-course-to-regional-india/cid/2135368" target="_blank" rel="noopener noreferrer">Telegraph India</a>).</p>
+          <p>India's own models are part of this. <strong>Sarvam 1 supports 11 Indian languages</strong>, and <strong>BharatGen, led by IIT Bombay</strong>, is building public-good AI for Indian languages (<a href="https://www.livemint.com/technology/ai-sovereign-language-models-sarvam-soket-gnani-ganai-indiaai-mission-genai-deepseek-openai-google-gemini-llama-krutrim-11750153684247.html" target="_blank" rel="noopener noreferrer">Mint</a>).</p>
+          <p>The quality, though, is uneven. The same Mint report cites a <strong>Greyhound CIO Pulse 2025 survey</strong> in which <strong>67% of enterprises exploring Indic LLMs reported frequent failures</strong> on mixed scripts, regional slang and emotional nuance. A fluent answer can still be a wrong one. <span class="flag"><strong>Needs verification:</strong> independent testing of regional-language AI accuracy in academic subjects.</span></p>
+
+          <aside class="callout callout-example">
+            <p><span class="callout-label">Everyday example</span> A Tamil-medium student asks for an explanation in Tamil, then asks the same question in English, then checks both against her textbook. She gets the concept twice and builds academic vocabulary along the way.</p>
+          </aside>
+        </section>
+
+        <section id="placements">
+          <h2>Placement Prep and the Confidence Gap</h2>
+          <p>Placement season is where the tier gap becomes visible. Well-connected colleges offer mock interviews, resume reviews and alumni referrals. Elsewhere, students apply cold and hope.</p>
+          <p>AI can partially fill that gap: resume feedback, mock interview questions, aptitude practice, coding explanations, company research. For a student who has never spoken to a recruiter, a low-stakes rehearsal can be the difference between freezing and starting.</p>
+          <p>There is a signal here. The Mercer | Mettl index found that <strong>46.1% of Indian graduates were employable for AI and ML roles in 2024, up from 40% in 2023</strong>, even as overall employability fell (<a href="https://economictimes.indiatimes.com/jobs/hr-policies-trends/employability-of-indian-graduates-dips-in-2024-ai/ml-skills-surge-mercer-mettl-report-finds/articleshow/118338462.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>). Students are adapting faster than the system around them.</p>
+          <p>The gender gap deserves naming: female graduate employability was <strong>41.7% against 43.4% for male graduates</strong> (<a href="https://www.mercer.com/insights/talent-and-transformation/talent-assessment/indias-graduate-skill-index-2025/" target="_blank" rel="noopener noreferrer">Mercer</a>). AI is no cure for structural inequality, but free, private practice helps students who have fewer chances to rehearse in public.</p>
+
+          <aside class="callout callout-example">
+            <p><span class="callout-label">Everyday example</span> You record a two-minute answer to "Tell me about yourself", ask an AI tool to critique the structure, rewrite it, and record again. By the third take, you sound like someone who has done this before — because you have.</p>
+          </aside>
+
+          <aside class="callout callout-note">
+            <p><span class="callout-label">Caveat</span> These figures measure <em>assessed employability</em>, not actual hiring. They are not placement rates.</p>
+          </aside>
+        </section>
+
+        <section id="other-side">
+          <h2>The Other Side: What AI Cannot Fix</h2>
+          <p>A piece about AI levelling the field has to be honest about what it does not touch.</p>
+          <p><strong>Access is better, but still uneven.</strong> The <strong>NSS Comprehensive Modular Survey: Telecom (Jan–Mar 2025)</strong> found <strong>92.7% of rural and 95.7% of urban persons aged 15–29 used the internet in the previous three months</strong>, and <strong>86.3% of households have internet at home</strong> (<a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132330" target="_blank" rel="noopener noreferrer">PIB</a>). Real progress.</p>
+          <p>Capability is the next hurdle. CEDA found <strong>16.7% of rural households lacked internet versus 8.4% urban</strong>, only <strong>3.8% of rural households had fibre versus 15.3% urban</strong>, and the biggest barrier was <strong>digital readiness — about 1 in 2 rural and 2 in 5 urban disconnected households did not know how to use the internet</strong> (<a href="https://ceda.ashoka.edu.in/one-nation-many-disconnects-mapping-indias-home-internet-gaps" target="_blank" rel="noopener noreferrer">CEDA, July 2025</a>).</p>
+          <p><strong>A shared phone is not a laptop.</strong> A device shared with three family members, a patchy connection and a capped data pack are not the same as broadband and a quiet room.</p>
+          <p><strong>Over-reliance is a genuine risk.</strong> AI can sound certain and still be wrong — including invented citations. A student who uses it to skip thinking learns less, not more.</p>
+          <p><strong>Institutions are uneven.</strong> The EY-Parthenon–FICCI report itself flags <strong>infrastructure, faculty readiness and governance</strong> as uneven (<a href="https://www.ey.com/en_in/insights/education/harnessing-ai-in-higher-education-opportunities-and-the-road-ahead" target="_blank" rel="noopener noreferrer">EY</a>). A metro college with an AI policy and a tier-3 college with one projector are not starting from the same place.</p>
+        </section>
+
+        <section id="how-to-use">
+          <h2>How Students Can Use AI Well</h2>
+          <ol>
+            <li><strong>Ask "why", not just "what".</strong> Get the reasoning before the answer.</li>
+            <li><strong>Verify once, always.</strong> Cross-check facts, formulas and citations. If you cannot find the source, treat it as unverified.</li>
+            <li><strong>Start in your strongest language.</strong> Understand it in Tamil or Hindi, then rebuild it in English.</li>
+            <li><strong>Turn it into a quiz partner.</strong> Ask it to test you after each chapter — recall beats re-reading.</li>
+            <li><strong>Keep a mistake log.</strong> Note where AI got things wrong. That is how judgment grows.</li>
+            <li><strong>Guard your data.</strong> Never paste Aadhaar numbers, bank details or private documents into a chatbot.</li>
+            <li><strong>Know your college's rules.</strong> About 57% of surveyed leading institutions already have an AI policy; policies vary, so ask before you submit.</li>
+          </ol>
+
+          <aside class="callout callout-example">
+            <p><span class="callout-label">Everyday example</span> Before a group presentation, your team asks an AI tool to play a skeptical examiner and fire questions at you. It is not a perfect stand-in for a professor, but it beats walking in cold.</p>
+          </aside>
+        </section>
+
+        <section id="colleges">
+          <h2>What Colleges and Policymakers Could Do</h2>
+          <ul>
+            <li><strong>Teach digital literacy as a core skill</strong>, not a one-day workshop. Access without capability does not close gaps.</li>
+            <li><strong>Publish clear AI-use rules</strong> so students know what is allowed in assignments and exams.</li>
+            <li><strong>Invest in faculty training</strong>, especially where resources are thin.</li>
+            <li><strong>Use the public infrastructure already built.</strong> SWAYAM has crossed <strong>4 crore cumulative enrolments</strong> (<a href="https://news.careers360.com/ugc-swayam-enrolment-crosses-4-crore-37-lakh-certificates-issued-in-interdisciplinary-courses" target="_blank" rel="noopener noreferrer">Careers360/UGC</a>); SWAYAM Plus had <strong>4.71 lakh registered learners by December 2025</strong> (<a href="https://sansad.in/getFile/loksabhaquestions/annex/187/AU281_3iFWBM.pdf?source=pqals" target="_blank" rel="noopener noreferrer">Lok Sabha, Feb 2026</a>). The pipes exist; awareness and completion are the hard part.</li>
+            <li><strong>Fund Indian-language academic content.</strong> Project Udaan and regional-language AI/ML courses are early steps, not finished solutions.</li>
+            <li><strong>Build in ethics and verification.</strong> The <strong>IndiaAI Mission</strong>, approved in March 2024 with <strong>₹10,371.92 crore over five years</strong>, includes a "Safe &amp; Trusted AI" pillar (<a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/dec/doc20251230747901.pdf" target="_blank" rel="noopener noreferrer">PIB</a>). Education should benefit explicitly.</li>
+          </ul>
+        </section>
+
+        <section id="conclusion">
+          <h2>Conclusion</h2>
+          <p>The student in that tier-3 town still does not have the library, the labs or the alumni network her metro counterpart has. AI has not handed her a level field.</p>
+          <p>What it has handed her is a tutor at midnight, an explanation in her own language, and a way to rehearse for interviews she once assumed were not for people like her.</p>
+          <p>That is not equality. It is a lower entry fee for catching up. And for a motivated student, a lower entry fee is often all that was missing.</p>
+          <p>The gap will not close because a model got cheaper. It closes when a student opens her phone, asks a better question, checks the answer — and then asks the next one.</p>
+        </section>
+
+        <section id="faqs">
+          <h2>FAQs</h2>
+          <div class="faq-item">
+            <h3>1. Is AI actually useful for college students in India?</h3>
+            <p>For specific tasks, yes: explaining concepts, generating practice questions, summarising readings, critiquing drafts and rehearsing interviews. It is weakest on precise facts, citations and exam-specific answers you have not verified.</p>
+          </div>
+          <div class="faq-item">
+            <h3>2. Can AI replace coaching classes?</h3>
+            <p>Partly, for some students. It handles doubt-solving and practice cheaply. It cannot replace structured teaching, peer competition, mentorship or accountability. Most students do best with a mix.</p>
+          </div>
+          <div class="faq-item">
+            <h3>3. Are free AI tools enough for exam prep?</h3>
+            <p>Usually, yes. Free tiers cover explanation, practice and feedback. Paid tiers add speed and longer context, but digital access and disciplined use matter more than the subscription.</p>
+          </div>
+          <div class="faq-item">
+            <h3>4. How do I avoid over-relying on AI?</h3>
+            <p>Use an "explain, verify, attempt" loop: ask for the reasoning, check it against a textbook, then solve a similar problem yourself before moving on.</p>
+          </div>
+          <div class="faq-item">
+            <h3>5. Is using AI cheating?</h3>
+            <p>Depends on your institution. About 57% of surveyed leading institutions have an AI policy (<a href="https://www.ey.com/en_in/insights/education/harnessing-ai-in-higher-education-opportunities-and-the-road-ahead" target="_blank" rel="noopener noreferrer">EY</a>). Check your college's rules before submitting AI-assisted work.</p>
+          </div>
+          <div class="faq-item">
+            <h3>6. Will AI reduce jobs for Indian graduates?</h3>
+            <p>The evidence is mixed. Overall graduate employability fell to 42.6% in 2024, while AI/ML role readiness rose to 46.1% (<a href="https://www.mercer.com/insights/talent-and-transformation/talent-assessment/indias-graduate-skill-index-2025/" target="_blank" rel="noopener noreferrer">Mercer</a>). Expect a shift in which skills matter, not a simple net loss — but this needs watching. <span class="flag"><strong>Needs verification:</strong> longitudinal hiring data by role and tier.</span></p>
+          </div>
+        </section>
+
+        <section id="sources" class="sources">
+          <h2>Sources</h2>
+          <ol>
+            <li>AISHE 2023-24 — enrolment, colleges, private share: <a href="https://www.business-standard.com/education/news/higher-education-enrolment-reaches-record-45-mn-but-growth-slows-aishe-126070900844_1.html" target="_blank" rel="noopener noreferrer">https://www.business-standard.com/education/news/higher-education-enrolment-reaches-record-45-mn-but-growth-slows-aishe-126070900844_1.html</a></li>
+            <li>EY-Parthenon–FICCI, <em>Future-Ready Campuses</em> (2025): <a href="https://www.ey.com/en_in/insights/education/harnessing-ai-in-higher-education-opportunities-and-the-road-ahead" target="_blank" rel="noopener noreferrer">https://www.ey.com/en_in/insights/education/harnessing-ai-in-higher-education-opportunities-and-the-road-ahead</a></li>
+            <li>The Hindu report on the same survey: <a href="https://www.thehindu.com/education/colleges/over-60-higher-education-institutions-permitting-use-of-ai-tools-by-students-report/article70139505.ece" target="_blank" rel="noopener noreferrer">https://www.thehindu.com/education/colleges/over-60-higher-education-institutions-permitting-use-of-ai-tools-by-students-report/article70139505.ece</a></li>
+            <li>Mercer | Mettl, <em>India's Graduate Skill Index 2025</em>: <a href="https://www.mercer.com/insights/talent-and-transformation/talent-assessment/indias-graduate-skill-index-2025/" target="_blank" rel="noopener noreferrer">https://www.mercer.com/insights/talent-and-transformation/talent-assessment/indias-graduate-skill-index-2025/</a></li>
+            <li>Business Standard on the Mercer findings: <a href="https://www.business-standard.com/industry/news/india-job-market-graduate-skill-gap-ai-automation-employability-2025-125021800437_1.html" target="_blank" rel="noopener noreferrer">https://www.business-standard.com/industry/news/india-job-market-graduate-skill-gap-ai-automation-employability-2025-125021800437_1.html</a></li>
+            <li>NSS Comprehensive Modular Survey: Telecom 2025 (PIB): <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132330" target="_blank" rel="noopener noreferrer">https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132330</a></li>
+            <li>CEDA, <em>One Nation, Many Disconnects</em> (2025): <a href="https://ceda.ashoka.edu.in/one-nation-many-disconnects-mapping-indias-home-internet-gaps" target="_blank" rel="noopener noreferrer">https://ceda.ashoka.edu.in/one-nation-many-disconnects-mapping-indias-home-internet-gaps</a></li>
+            <li>IGNOU–IIT Bombay Project Udaan: <a href="https://www.indiatoday.in/education-today/news/story/ignou-to-use-iit-bombays-new-ai-project-to-deliver-education-in-indian-language-2733627-2025-05-31" target="_blank" rel="noopener noreferrer">https://www.indiatoday.in/education-today/news/story/ignou-to-use-iit-bombays-new-ai-project-to-deliver-education-in-indian-language-2733627-2025-05-31</a></li>
+            <li>Masai–IIT Patna regional-language AI/ML course: <a href="https://www.telegraphindia.com/edugraph/campus/masai-and-iit-patna-break-new-ground-by-taking-ai-and-ml-certificate-course-to-regional-india/cid/2135368" target="_blank" rel="noopener noreferrer">https://www.telegraphindia.com/edugraph/campus/masai-and-iit-patna-break-new-ground-by-taking-ai-and-ml-certificate-course-to-regional-india/cid/2135368</a></li>
+            <li>Mint on India's language models and their limits: <a href="https://www.livemint.com/technology/ai-sovereign-language-models-sarvam-soket-gnani-ganai-indiaai-mission-genai-deepseek-openai-google-gemini-llama-krutrim-11750153684247.html" target="_blank" rel="noopener noreferrer">https://www.livemint.com/technology/ai-sovereign-language-models-sarvam-soket-gnani-ganai-indiaai-mission-genai-deepseek-openai-google-gemini-llama-krutrim-11750153684247.html</a></li>
+            <li>SWAYAM 4 crore enrolments: <a href="https://news.careers360.com/ugc-swayam-enrolment-crosses-4-crore-37-lakh-certificates-issued-in-interdisciplinary-courses" target="_blank" rel="noopener noreferrer">https://news.careers360.com/ugc-swayam-enrolment-crosses-4-crore-37-lakh-certificates-issued-in-interdisciplinary-courses</a></li>
+            <li>SWAYAM Plus 4.71 lakh learners (Lok Sabha, Feb 2026): <a href="https://sansad.in/getFile/loksabhaquestions/annex/187/AU281_3iFWBM.pdf?source=pqals" target="_blank" rel="noopener noreferrer">https://sansad.in/getFile/loksabhaquestions/annex/187/AU281_3iFWBM.pdf?source=pqals</a></li>
+            <li>PIB, <em>Transforming India with AI</em> (IndiaAI Mission outlay): <a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/dec/doc20251230747901.pdf" target="_blank" rel="noopener noreferrer">https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/dec/doc20251230747901.pdf</a></li>
+          </ol>
+        </section>
+
+        <section id="verification" class="verification">
+          <h2>Still flagged for verification</h2>
+          <ul>
+            <li>India-specific student AI-usage rates at the scale of the global DEC survey.</li>
+            <li>Independent accuracy testing of regional-language AI in academic subjects.</li>
+            <li>Whether "tier-2/tier-3" is defined consistently across the Mercer and AISHE datasets.</li>
+            <li>Longitudinal hiring outcomes (not just employability scores) for AI-exposed roles.</li>
+            <li>State-wise college AI-policy adoption beyond the 30-institution sample.</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;width:100%;">
+      <span>AI &amp; higher education in India — research-backed explainer.</span>
+      <span>All factual claims link to their sources above.</span>
+    </div>
+  </footer>
+
+  <a class="to-top" id="toTop" href="#main" aria-label="Back to top">↑</a>
+
+  <script>
+    (function () {
+      var progress = document.getElementById('progress');
+      var toTop = document.getElementById('toTop');
+      var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+      var sections = tocLinks.map(function (link) {
+        return document.querySelector(link.getAttribute('href'));
+      }).filter(Boolean);
+
+      function onScroll() {
+        var doc = document.documentElement;
+        var scrollTop = window.pageYOffset || doc.scrollTop;
+        var height = doc.scrollHeight - window.innerHeight;
+        var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+        progress.style.width = pct + '%';
+
+        if (scrollTop > 480) {
+          toTop.classList.add('visible');
+        } else {
+          toTop.classList.remove('visible');
+        }
+
+        var current = null;
+        for (var i = 0; i < sections.length; i++) {
+          var rect = sections[i].getBoundingClientRect();
+          if (rect.top <= 120) {
+            current = sections[i].id;
+          }
+        }
+        tocLinks.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    })();
+  </script>
+</body>
+</html>
