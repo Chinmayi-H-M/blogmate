@@ -1,224 +1,203 @@
-# BlogMate ✍️
+<div align="center">
 
-### From a single topic to a research-backed, SEO-aware article and a browser-ready webpage.
+# ✍️ BlogMate
 
-**BlogMate** is an AI-assisted blogging workflow built for individual bloggers. It brings topic exploration, research, outlining, drafting, SEO preparation, revision, and HTML output into a human-guided workflow using **Switch** and an AI agent.
+### Your AI-powered blogging companion — from topic to publish-ready preview.
 
-> Built for the **Flip the Switch Hackathon 2026** · Track 2: Best Personal / Creative Workflow
+<p>
+  <b>Research.</b> <b>Write.</b> <b>Optimize.</b> <b>Preview.</b>
+</p>
 
-![Prototype](https://img.shields.io/badge/status-working%20prototype-success)
-![Workflow](https://img.shields.io/badge/workflow-human--in--the--loop-blue)
-![Output](https://img.shields.io/badge/output-Markdown%20%7C%20HTML-orange)
+<p>
+  <a href="https://github.com/Chinmayi-H-M/blogmate">
+    <img src="https://img.shields.io/badge/GitHub-View%20Repository-181717?style=for-the-badge&logo=github" alt="GitHub repository">
+  </a>
+  <img src="https://img.shields.io/badge/Track-2%20%7C%20Personal%20%26%20Creative%20Workflow-6C63FF?style=for-the-badge" alt="Hackathon track">
+  <img src="https://img.shields.io/badge/Powered%20by-AI-0A7B83?style=for-the-badge" alt="AI powered">
+</p>
+
+**Built for the WeMakeDevs Flip the Switch Hackathon · 7 November 2026**
+
+[Explore the project](#-explore-blogmate) · [See the workflow](#-how-blogmate-works) · [View screenshots](#-see-it-in-action)
+
+</div>
 
 ---
 
-## Table of contents
+## 🌱 What is BlogMate?
 
-- [The problem](#the-problem)
-- [What BlogMate does](#what-blogmate-does)
-- [How it uses Switch](#how-it-uses-switch)
-- [Workflow](#workflow)
-- [Technology](#technology)
-- [Repository structure](#repository-structure)
-- [Try the generated article](#try-the-generated-article)
-- [Screenshots](#screenshots)
-- [Setup and usage](#setup-and-usage)
-- [Current scope and limitations](#current-scope-and-limitations)
-- [Future improvements](#future-improvements)
+BlogMate is an AI-powered blogging assistant designed to make the content-creation process easier and more organized. Give it a topic and a writing goal, and it can help turn that idea into a structured, SEO-conscious blog article with a corresponding HTML preview.
 
-## The problem
+Instead of starting with a blank page and manually creating a webpage for every post, BlogMate brings the writing and preview workflow together in one place.
 
-Independent bloggers often repeat the same time-consuming steps for every post:
+> **One topic in. An article and a webpage preview out.**
 
-1. Find a useful topic and a distinctive angle.
-2. Research facts and keep track of reliable sources.
-3. Organise the article into a readable structure.
-4. Draft, revise, and check the content.
-5. Prepare SEO metadata.
-6. Turn the finished draft into a webpage.
+## 🎯 The problem we're solving
 
-AI writing tools can speed up drafting, but a fast draft is not necessarily a trustworthy or publishable article. BlogMate aims to make the entire preparation workflow easier while keeping the writer involved in important decisions and final review.
+Creating a good blog post takes more than writing paragraphs. A creator may need to:
 
-## What BlogMate does
+- Find a useful angle for a topic.
+- Organize ideas into a readable article.
+- Consider search intent and SEO-friendly structure.
+- Format the content for the web.
+- Create and check an HTML version.
 
-BlogMate is designed to help a blogger move from a topic to publication-ready materials:
+Doing these steps separately can be repetitive and time-consuming. BlogMate aims to simplify this workflow through an AI-assisted process.
 
-- **Topic exploration:** suggest useful angles and clarify the intended audience.
-- **Research:** find relevant sources and retain links for fact-checking.
-- **Outlining:** organise the article before drafting.
-- **Writing and revision:** create a draft and incorporate the writer's feedback.
-- **SEO preparation:** prepare a title, description, keywords, and URL slug.
-- **Quality review:** flag claims or details that need human verification.
-- **Two output formats:** save the article as Markdown and create a responsive HTML page for browser preview.
+## ✨ What BlogMate can do
 
-The writer remains responsible for reviewing the article and deciding whether and where to publish it. BlogMate does not autonomously publish content to a CMS.
+| Capability | What it helps with |
+|---|---|
+| 💡 Topic-based writing | Turns a given topic into a structured blog article. |
+| 🧭 Research assistance | Helps develop relevant points and context for the article. |
+| 🔎 SEO-conscious structure | Uses clear headings, readable sections, and search-friendly article organization. |
+| 📝 Markdown output | Saves the article in an easy-to-edit `.md` format. |
+| 🌐 HTML preview | Creates an HTML version so the article can be viewed in a browser. |
+| 📁 Organized output | Keeps generated content in topic-specific folders. |
 
-## How it uses Switch
+## 🚀 Explore BlogMate
 
-Switch is the collaboration layer through which the user communicates with the BlogMate agent in a room.
+The repository includes these generated articles and website files:
 
-In this project:
+| Explore | What you'll find |
+|---|---|
+| [How AI Is Changing Student Learning](blogmate-output/how-ai-is-changing-student-learning/) | Article in Markdown and its HTML preview. |
+| [The Hidden Cost of Free Apps](blogmate-output/hidden-cost-of-free-apps/) | Topic folder for the article output. |
+| [AI and College Students in India](blogmate-output/ai-college-students-india.md) | An additional Markdown article. |
+| [BlogMate homepage](blogmate-output/index.html) | Main HTML page in the output directory. |
 
-1. The user sends a topic or instruction in the BlogMate room.
-2. The BlogMate agent receives the request and responds in that room.
-3. The user can review suggestions, give feedback, and request revisions.
-4. The agent works in its local workspace and saves the resulting files.
-5. The agent reports the output paths so the user can open and review them.
-
-The agent is run through **OpenCode**. A Google Gemini API key has been authenticated in OpenCode, and the `google/gemini-3.8-flash` model was successfully tested from the OpenCode CLI. The exact model used by a Switch agent session should be confirmed in the running Switch workflow before describing it as verified end-to-end.
-
-Switch provides the room-based interaction and agent coordination. It does not host the generated webpage or provide a publishing service in this prototype.
-
-## Workflow
+## ⚙️ How BlogMate works
 
 ```mermaid
 flowchart TD
-    A[User submits a topic in Switch] --> B[BlogMate agent]
-    B --> C[Research and source collection]
-    C --> D[Article angles and outline]
-    D --> E[Human review and feedback]
-    E --> F[Draft and revise article]
-    F --> G[SEO preparation]
-    G --> H[Quality review and verification flags]
-    H --> I[Save Markdown article]
-    H --> J[Create responsive HTML page]
-    I --> K[Local topic output folder]
-    J --> K
-    K --> L[Human opens and reviews preview]
+    A([💡 Enter a blog topic]) --> B[BlogMate receives the request]
+    B --> C[AI-assisted content creation]
+    C --> D[Structure the article with SEO in mind]
+    D --> E[Save the article as Markdown]
+    D --> F[Generate an HTML preview]
+    E --> G[Organize files in a topic folder]
+    F --> G
+    G --> H([🌐 Open and review the preview])
 ```
 
-The workflow is human-guided: the writer can approve the direction, provide corrections, and review the final files before publication.
+### A sample prompt
 
-## Technology
+```text
+Create a short SEO-friendly article on
+"How AI Is Changing Student Learning".
 
-| Technology / tool | Role |
+Save the Markdown article and HTML preview
+in a new topic folder.
+```
+
+The generated files can then be reviewed, edited, and version-controlled in the repository.
+
+## 🧰 Built with
+
+| Tool / technology | Role |
 |---|---|
-| Switch | Room-based interaction and agent collaboration |
-| OpenCode | Agent execution environment |
-| Google Gemini API | Model provider authenticated in OpenCode |
-| Gemini 3.8 Flash | Model successfully tested through the OpenCode CLI; Switch session usage requires end-to-end confirmation |
-| Markdown | Editable article source |
-| HTML5 | Webpage structure |
-| CSS3 | Responsive layout and presentation |
-| Vanilla JavaScript | Lightweight page interactions, where included |
-| Git and GitHub | Version control and public project repository |
+| Switch | Agent workspace and workflow environment |
+| OpenCode | Agent runtime / model access layer |
+| Google Gemini API | AI model provider configured through OpenCode |
+| Markdown | Editable article format |
+| HTML & CSS | Browser-based article preview |
+| Git & GitHub | Version control and project repository |
 
-## Repository structure
+*The exact model used for an individual Switch agent run depends on the active OpenCode/Switch configuration.*
 
-The repository contains the README and generated blog content. The exact contents may grow as more topics are processed.
+## 🖼️ See it in action
+
+### 1. BlogMate agent configuration
+See the agent identity, description, workspace, and instructions.
+
+![BlogMate agent configuration](docs/screenshots/agent-configuration.png)
+
+### 2. Blog creation workflow
+A sample request to generate an article and its HTML preview.
+
+![BlogMate workflow](docs/screenshots/blogmate-workflow.jpeg)
+
+### 3. Generated HTML preview
+A browser view of the generated student-learning article.
+
+![BlogMate HTML preview](docs/screenshots/blogmate-html-preview.png)
+
+### 4. GitHub repository
+The project structure and generated outputs in GitHub.
+
+![BlogMate GitHub repository](docs/screenshots/github-repository.png)
+
+## ▶️ Try the generated article preview
+
+You can view the HTML preview locally:
+
+1. Clone the repository.
+2. Open the project folder in VS Code.
+3. Start a local server using the Live Server extension, or run:
+
+   ```bash
+   python -m http.server 8000
+   ```
+
+4. Open the generated article preview in your browser:
+
+   `http://localhost:8000/blogmate-output/how-ai-is-changing-student-learning/index.html`
+
+To inspect the source, open the corresponding `article.md` file in the same topic folder.
+
+## 📂 Repository structure
 
 ```text
 blogmate/
-├── README.md
-└── blogmate-output/
-    ├── ... topic-specific article files ...
-    └── ... HTML preview files ...
+├── blogmate-output/
+│   ├── hidden-cost-of-free-apps/
+│   ├── how-ai-is-changing-student-learning/
+│   │   ├── article.md
+│   │   └── index.html
+│   ├── ai-college-students-india.md
+│   └── index.html
+├── docs/
+│   └── screenshots/
+│       ├── agent-configuration.png
+│       ├── blogmate-html-preview.png
+│       ├── blogmate-workflow.jpeg
+│       └── github-repository.png
+└── README.md
 ```
 
-A generated topic folder may contain a Markdown article and an HTML preview. Check the repository for the latest actual filenames; this diagram intentionally avoids claiming files that may not yet have been committed.
+## 🧪 Quick project walkthrough
 
-## Try the generated article
+- [ ] Open the agent configuration screenshot.
+- [ ] Review the sample workflow screenshot.
+- [ ] Open the generated `article.md` file.
+- [ ] Run a local server and view `index.html`.
+- [ ] Explore the other topic folders.
 
-The generated HTML file is a static webpage. To preview it locally:
+## 🔮 What's next?
 
-1. Open the relevant topic folder.
-2. Double-click its `index.html` file, or open it in a browser.
-3. Review the article, navigation, and responsive layout.
+BlogMate can be extended with features such as:
 
-You can also start a local server from the repository folder:
+- More control over tone, audience, article length, and writing style.
+- Reusable blog templates and topic planning.
+- Stronger source links and fact-checking support.
+- Improved SEO metadata and article quality checks.
+- A simple dashboard to browse and manage generated posts.
+- Optional publishing integrations.
 
-```powershell
-python -m http.server 8000
-```
+## 👩‍💻 Built by
 
-Then visit `http://localhost:8000` and navigate to the relevant HTML file.
+**Chinmayi H M**
 
-The local preview is available on the computer running the server; it is not a public deployment.
+A project built for the **WeMakeDevs Flip the Switch Hackathon — Track 2: Best Personal / Creative Workflow**.
 
-## Screenshots
-
-Add real screenshots here before final submission. Do not leave placeholders in the final README.
-
-Create this folder:
-
-```text
-docs/
-└── screenshots/
-    ├── switch-room.png
-    ├── agent-configuration.png
-    ├── markdown-output.png
-    └── html-preview.png
-```
-
-Then uncomment or add the corresponding image references:
-
-```markdown
-### Switch room interaction
-![BlogMate interacting through a Switch room](docs/screenshots/switch-room.png)
-
-### Agent configuration
-![BlogMate agent configuration](docs/screenshots/agent-configuration.png)
-
-### Generated Markdown article
-![Generated Markdown article](docs/screenshots/markdown-output.png)
-
-### HTML preview
-![Generated article in a browser](docs/screenshots/html-preview.png)
-```
-
-Capture the actual application and output. Redact API keys, tokens, private paths, and personal information before committing screenshots.
-
-## Setup and usage
-
-### Requirements
-
-- Switch installed and running.
-- OpenCode installed and configured as the agent execution provider.
-- A supported model provider authenticated in OpenCode.
-- A browser to preview the generated HTML.
-- Git for version control (optional for running the local preview).
-
-### Use BlogMate
-
-1. Open Switch.
-2. Open the BlogMate room.
-3. Send a blog topic and any audience or tone guidance.
-4. Review the agent's research, outline, and draft.
-5. Give feedback or request revisions.
-6. Open the generated Markdown and HTML files from the paths reported by the agent.
-7. Review and fact-check the content before publishing.
-
-### View the HTML output
-
-Open the generated `index.html` in a browser. No frontend framework or package installation is required for a self-contained HTML output.
-
-## Current scope and limitations
-
-This repository documents a working prototype and its generated content, not a hosted blogging platform.
-
-- The workflow uses a human-in-the-loop agent interaction.
-- The outputs are Markdown and HTML files in a local workspace.
-- There is no backend, database, CMS integration, or automated publishing pipeline in this prototype.
-- A local HTML preview is not the same as public website hosting.
-- Research links and factual claims still require human review.
-- Gemini was verified through the OpenCode CLI; verify the model selection in Switch before claiming that the Switch session uses that exact model.
-
-## Future improvements
-
-- Automatically generate a consistent HTML page from a reusable template.
-- Create an index page for multiple articles.
-- Add automated checks for broken links, missing headings, duplicate IDs, and SEO metadata.
-- Add a review checklist for claims that need verification.
-- Add optional publishing integrations after human approval.
-- Add multilingual article generation and accessibility checks.
-- Add a repeatable GitHub commit-and-push workflow with explicit user approval.
-
-## Project links
-
-- **GitHub repository:** https://github.com/Chinmayi-H-M/blogmate
-- **Hackathon:** https://www.wemakedevs.org/hackathons/switch
-- **Demo video:** Add the final demo URL here.
+- **GitHub:** [Chinmayi-H-M/blogmate](https://github.com/Chinmayi-H-M/blogmate)
 
 ---
 
-*BlogMate is a prototype built to explore how room-based agent collaboration can support a real creative workflow. The goal is not to replace the blogger, but to reduce repetitive work and leave more time for ideas, judgement, and storytelling.*
+<div align="center">
+
+### ✨ Make blogging less repetitive. Make creating more intentional.
+
+**BlogMate — from a simple idea to a web-ready article.**
+
+</div>
